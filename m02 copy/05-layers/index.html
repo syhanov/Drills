@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тренажёр M02 — 5: слои</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--
+    Задание: создай styles.css рядом с этим файлом и добейся совпадения
+    с etalon.png, не меняя разметку. Бейдж, лента и подпись — слои
+    поверх обложки: absolute внутри позиционированного родителя.
+    Раскладка самих карточек — flexbox с зазором 24px.
+
+    Целевые размеры:
+    - box-sizing: border-box — глобально; маргин body — 0;
+      шрифт: system-ui, sans-serif;
+    - страница: отступы 24px;
+    - карточка: ширина 240px, обложка 240×320, скругление 8px,
+      обложка-заливка #4a4e69 (первая) и #6d6875 (вторая);
+    - бейдж: правый верхний угол, отступ от краёв 8px, фон #ffb703,
+      текст #22223b жирный, отступы 4px 10px, скругление 999px;
+    - лента: левый верхний угол, отступ 8px, фон #e63946, текст белый,
+      отступы 4px 10px, скругление 4px;
+    - подпись: прижата к низу обложки во всю ширину, фон
+      rgba(34, 34, 59, 0.8), текст белый, отступы 8px 12px; название
+      жирным, год обычным.
+  -->
+</head>
+<body>
+  <main>
+    <ul class="cards">
+      <li class="card">
+        <div class="cover cover-a">
+          <span class="badge">9.1</span>
+          <span class="ribbon">Хит</span>
+          <p class="caption"><strong>Hollow Knight</strong> · 2017</p>
+        </div>
+      </li>
+      <li class="card">
+        <div class="cover cover-b">
+          <span class="badge">8.4</span>
+          <p class="caption"><strong>Celeste</strong> · 2018</p>
+        </div>
+      </li>
+    </ul>
+  </main>
+</body>
+</html>

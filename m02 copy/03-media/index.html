@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тренажёр M02 — 3: медиа-объект</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--
+    Задание: создай styles.css рядом с этим файлом и добейся совпадения
+    с etalon.png, не меняя разметку. Оба блока — flexbox; таблицы,
+    float и позиционирование не использовать.
+
+    Целевые размеры:
+    - box-sizing: border-box — глобально; маргин body — 0;
+      шрифт: system-ui, sans-serif;
+    - контейнер: не шире 640px, по центру, отступы 24px 16px;
+    - отзыв (медиа-объект): аватар 64×64, круглый, фон #4a4e69,
+      не сжимается; текст справа, зазор 16px; имя жирным;
+      текст выровнен по верху аватара;
+    - зазор между отзывами: 24px;
+    - промо-блок: отступ сверху 24px, высота 240px, фон #f2e9e4,
+      скругление 8px, кнопка ровно по центру обеих осей;
+    - кнопка: отступы 12px 32px, фон #22223b, текст белый, без рамки,
+      скругление 8px, шрифт — как у страницы.
+  -->
+</head>
+<body>
+  <main class="container">
+    <h1>Отзывы</h1>
+    <article class="review">
+      <div class="avatar"></div>
+      <div class="review-body">
+        <p class="author">Ольга</p>
+        <p>Каталог помог разобрать бэклог из сорока игр. Половину удалила,
+        вторую половину всё равно не запущу, но теперь это организованно.</p>
+      </div>
+    </article>
+    <article class="review">
+      <div class="avatar"></div>
+      <div class="review-body">
+        <p class="author">Максим</p>
+        <p>Поставил оценку всем частям одной серии. Спорить с самим собой
+        в комментариях пока нельзя — жду фичу.</p>
+      </div>
+    </article>
+    <section class="promo">
+      <button class="cta">Собрать свою игротеку</button>
+    </section>
+  </main>
+</body>
+</html>

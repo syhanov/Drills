@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тренажёр M02 — 4: галерея</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--
+    Задание: создай styles.css рядом с этим файлом и добейся совпадения
+    с etalon.png, не меняя разметку. Сетка — grid; колонки объявить
+    одной строкой через repeat() и fr, размеры плиток — только
+    grid-column/grid-row, без width/height на плитках.
+
+    Целевые размеры:
+    - box-sizing: border-box — глобально; маргин body — 0;
+      шрифт: system-ui, sans-serif;
+    - контейнер: не шире 840px, по центру, отступы 24px 16px;
+    - сетка: 4 равные колонки, зазор 16px, высота ряда 120px;
+    - у списка галереи маркеры убраны, дефолтные маргины и паддинги сброшены;
+    - плитка: фон #9a8c98, скругление 8px, подпись белым по центру;
+    - плитка «Хит года» занимает 2 колонки и 2 ряда;
+    - плитка «Скоро» занимает 2 колонки и 1 ряд.
+  -->
+</head>
+<body>
+  <main class="container">
+    <h1>Галерея</h1>
+    <ul class="gallery">
+      <li class="tile tile-hero">Хит года</li>
+      <li class="tile">Экшен</li>
+      <li class="tile">Стратегия</li>
+      <li class="tile">Головоломка</li>
+      <li class="tile">Гонки</li>
+      <li class="tile tile-wide">Скоро</li>
+      <li class="tile">Инди</li>
+      <li class="tile">Хоррор</li>
+    </ul>
+  </main>
+</body>
+</html>
