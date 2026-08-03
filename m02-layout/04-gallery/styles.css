@@ -15,7 +15,7 @@ body {
     list-style: none;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 120px);
+    grid-auto-rows: 120px;
     gap: 16px;
     margin: 0;
     padding: 0;
