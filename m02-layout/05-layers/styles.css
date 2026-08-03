@@ -9,25 +9,25 @@ body {
     display: flex;
     padding: 0 24px;
     gap: 24px;
+    margin: 0;
 }
 .card {
     list-style: none;
     width: 240px;
     height: 100%;
 }
-.cover-a {
+.cover {
     width: 240px;
     height: 320px;
     border-radius: 8px;
-    background-color: #4a4e69;
     position: relative;
+
+}   
+.cover-a {
+    background-color: #4a4e69;
 }
 .cover-b {
-    width: 240px;
-    height: 320px;
-    border-radius: 8px;
     background-color: #6d6875;
-    position: relative;
 }
 .badge {
     position: absolute;
