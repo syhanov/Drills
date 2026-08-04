@@ -7,14 +7,12 @@ body {
 }
 .cards {
     display: flex;
-    padding: 0 24px;
+    padding: 24px;
     gap: 24px;
     margin: 0;
 }
 .card {
     list-style: none;
-    width: 240px;
-    height: 100%;
 }
 .cover {
     width: 240px;
