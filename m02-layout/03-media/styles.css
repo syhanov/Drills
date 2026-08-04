@@ -10,6 +10,12 @@ body {
     max-width: 640px;
     padding: 24px 16px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+.container h1 {
+    margin: 0;
 }
 .review {
     display: flex;
@@ -28,12 +34,6 @@ body {
 }
 .author {
     font-weight: bold;
-}
-.review {
-    margin-bottom: 24px;
-}
-.review:last-of-type {
-    margin-bottom: 0;
 }
 .promo {
     margin-top: 24px;
