@@ -51,18 +51,6 @@ body {
 /* Дизайнер попросил: на мобильном сверху «Мои списки» — возвращаются
    туда чаще всего, — а «Каталог» уезжает вниз. Разметку трогать
    не стали, переставили визуально через order. */
-.promo-nav a:nth-child(1) {
-  order: 3;
-}
-
-.promo-nav a:nth-child(2) {
-  order: 2;
-}
-
-.promo-nav a:nth-child(3) {
-  order: 1;
-}
-
 @media (min-width: 768px) {
   .promo h1 {
     font-size: 32px;
@@ -75,12 +63,5 @@ body {
 
   .promo-nav a {
     flex: 1;
-  }
-
-  /* В ряду порядок обычный — перестановка нужна была только колонке. */
-  .promo-nav a:nth-child(1),
-  .promo-nav a:nth-child(2),
-  .promo-nav a:nth-child(3) {
-    order: 0;
   }
 }
