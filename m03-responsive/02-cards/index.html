@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Тренажёр M03 — 2: сетка карточек</title>
+  <link rel="stylesheet" href="styles.css">
+  <!--
+    Задание: создай styles.css рядом с этим файлом и добейся совпадения
+    с etalon-360.png и etalon-1200.png, не меняя разметку.
+
+    Правила:
+    - разметку не менять — ни классов, ни порядка, ни тегов;
+    - правила вне медиазапросов должны давать мобильный вид (360px);
+    - медиазапросы — только min-width, ни одного max-width;
+    - обложки выравниваются через aspect-ratio и object-fit,
+      без фиксированной height в пикселях;
+    - горизонтальной прокрутки не должно быть ни на 360px, ни на 1200px.
+
+    Целевые размеры:
+    - box-sizing: border-box — глобально; маргин body — 0;
+      шрифт: system-ui, sans-serif; текст #22223b, фон страницы #f2e9e4;
+    - контейнер: не шире 1080px, по центру, внутренние отступы 16px
+      (на широком экране — 24px);
+    - 360px: одна колонка, карточки во всю ширину контейнера, зазор 16px;
+    - 1200px: три равные колонки, зазор 24px;
+    - между ними нужна ступень в две колонки: включи её там, где карточки
+      в одну колонку становятся неоправданно широкими. Точку выбираешь сам —
+      в референсе это min-width около 600px, а три колонки — около 960px;
+    - карточка: фон #ffffff, скругление 8px, внутренние отступы 12px;
+    - обложка: во всю ширину карточки, пропорции 3/2, скругление 6px.
+      Исходный cover.svg — 4/3, лишнее по высоте обрезается object-fit: cover,
+      а не сплющивается;
+    - у картинок в разметке проставлены width и height — не удаляй их;
+      чтобы атрибут height не спорил с aspect-ratio, погаси его в CSS
+      через height: auto;
+    - название: 18px; год и жанр: 14px, цвета #6d6875 и #4a4e69;
+    - шапка отделена снизу границей 3px #ffb703, заголовок 24px
+      (на широком экране — 32px).
+  -->
+</head>
+<body>
+  <div class="page">
+    <header class="page-header">
+      <h1>Каталог «Игротеки»</h1>
+      <p class="page-note">Шесть игр, которые редакция всё-таки прошла до конца.</p>
+    </header>
+    <main class="cards">
+      <article class="card">
+        <img class="card-cover" src="cover.svg" width="300" height="225" alt="Обложка игры «Кузница миров»">
+        <h2 class="card-title">Кузница миров</h2>
+        <p class="card-year">2021</p>
+        <p class="card-genre">Песочница с крафтом</p>
+      </article>
+      <article class="card">
+        <img class="card-cover" src="cover.svg" width="300" height="225" alt="Обложка игры «Северный тракт»">
+        <h2 class="card-title">Северный тракт</h2>
+        <p class="card-year">2019</p>
+        <p class="card-genre">RPG, открытый мир</p>
+      </article>
+      <article class="card">
+        <img class="card-cover" src="cover.svg" width="300" height="225" alt="Обложка игры «Тихий цех»">
+        <h2 class="card-title">Тихий цех</h2>
+        <p class="card-year">2023</p>
+        <p class="card-genre">Хоррор про инвентарь</p>
+      </article>
+      <article class="card">
+        <img class="card-cover" src="cover.svg" width="300" height="225" alt="Обложка игры «Орбита 9»">
+        <h2 class="card-title">Орбита 9</h2>
+        <p class="card-year">2020</p>
+        <p class="card-genre">Стратегия в реальном времени</p>
+      </article>
+      <article class="card">
+        <img class="card-cover" src="cover.svg" width="300" height="225" alt="Обложка игры «Печатная машинка»">
+        <h2 class="card-title">Печатная машинка</h2>
+        <p class="card-year">2024</p>
+        <p class="card-genre">Головоломка</p>
+      </article>
+      <article class="card">
+        <img class="card-cover" src="cover.svg" width="300" height="225" alt="Обложка игры «Гонки на тостерах»">
+        <h2 class="card-title">Гонки на тостерах</h2>
+        <p class="card-year">2018</p>
+        <p class="card-genre">Аркадные гонки</p>
+      </article>
+    </main>
+    <footer class="page-footer">Обложки временные. Художник обещал настоящие к следующему патчу.</footer>
+  </div>
+</body>
+</html>
