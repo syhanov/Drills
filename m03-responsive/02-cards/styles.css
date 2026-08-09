@@ -1,0 +1,70 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+    color: #22223b;
+    background-color: #f2e9e4;
+}
+.page {
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 16px;
+}
+.page-header {
+    border-bottom: 3px solid #ffb703;
+}
+.page-header h1 {
+    font-size: 24px;
+}
+.cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 16px;
+    margin: 16px 0;
+}
+.card {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 12px;
+}
+.card-cover {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3/2;
+    object-fit: cover;
+    border-radius: 6px;
+}
+.card-title {
+    font-size: 18px;
+}
+.card-year,
+.card-genre {
+    font-size: 14px;
+}
+.card-year {
+    color: #6d6875;
+}
+.card-genre {
+    color: #4a4e69;
+}
+@media (min-width: 572px) {
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (min-width: 900px) {
+    .page {
+        padding: 24px;
+    }
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+        margin: 24px 0;
+    }
+    .page-header h1 {
+    font-size: 32px;
+}
+}
