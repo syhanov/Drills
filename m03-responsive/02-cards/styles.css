@@ -10,20 +10,28 @@ body {
 .page {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 16px;
+    padding: 0 16px;
 }
 .page-header {
     border-bottom: 3px solid #ffb703;
 }
 .page-header h1 {
     font-size: 24px;
+    margin: 0;
+}
+.page-note {
+    margin: 10px 0;
+    font-size: 14px;
+}
+.page-footer {
+    font-size: 14px;
 }
 .cards {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 16px;
-    margin: 16px 0;
+    margin: 0px 0;
 }
 .card {
     background-color: #ffffff;
@@ -39,13 +47,17 @@ body {
 }
 .card-title {
     font-size: 18px;
+    margin: 0;
+    margin-top: 8px;
 }
 .card-year,
 .card-genre {
     font-size: 14px;
+    margin: 0;
 }
 .card-year {
     color: #6d6875;
+    margin: 4px 0;
 }
 .card-genre {
     color: #4a4e69;
@@ -62,7 +74,7 @@ body {
     .cards {
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
-        margin: 24px 0;
+        margin: 15px 0 24px;
     }
     .page-header h1 {
     font-size: 32px;
