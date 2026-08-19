@@ -66,7 +66,7 @@ body {
     padding: 0;
     margin: 0;
     padding-left: 2px;
-    list-style-position: inside;
+    padding-left: 20px;
 }
 .panel h2 {
     margin: 0;
@@ -98,8 +98,5 @@ body {
     }
     .review h1 {
         font-size: 32px;
-    }
-    .site-footer {
-        padding-top: 12px;
     }
 }
