@@ -10,7 +10,7 @@ body {
 .page {
     max-width: 1080px;
     margin: 0 auto;
-    padding: 0 16px;
+    padding: 16px;
 }
 .page-header {
     border-bottom: 3px solid #ffb703;
@@ -31,7 +31,7 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 16px;
-    margin: 0px 0;
+    margin: 15px 0 24px;
 }
 .card {
     background-color: #ffffff;
@@ -71,10 +71,13 @@ body {
     .page {
         padding: 24px;
     }
+    .page-note {
+        margin: 8px 0 12px;
+    }
     .cards {
         grid-template-columns: repeat(3, 1fr);
         gap: 24px;
-        margin: 15px 0 24px;
+        margin: 16px 0 24px;
     }
     .page-header h1 {
     font-size: 32px;
