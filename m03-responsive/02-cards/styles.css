@@ -26,6 +26,10 @@ body {
 .page-footer {
     font-size: 14px;
 }
+.page-footer, 
+.page-note {
+    color: #6d6875;
+}
 .cards {
     display: grid;
     grid-template-columns: 1fr;
