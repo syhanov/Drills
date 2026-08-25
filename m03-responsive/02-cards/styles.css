@@ -14,17 +14,19 @@ body {
 }
 .page-header {
     border-bottom: 3px solid #ffb703;
+    margin-bottom: 16px;
 }
 .page-header h1 {
     font-size: 24px;
     margin: 0;
 }
 .page-note {
-    margin: 10px 0;
+    margin: 8px 0 12px;
     font-size: 14px;
 }
 .page-footer {
     font-size: 14px;
+    margin-top: 24px;
 }
 .page-footer, 
 .page-note {
@@ -35,7 +37,6 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: auto;
     gap: 16px;
-    margin: 15px 0 24px;
 }
 .card {
     background-color: #ffffff;
