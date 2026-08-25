@@ -76,7 +76,7 @@ body {
 }
 .specs {
   width: 100%;
-  min-width: 480px;
+  min-width: 560px;
   table-layout: fixed;
   border-collapse: collapse;
   background: #ffffff;
