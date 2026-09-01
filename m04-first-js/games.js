@@ -1,0 +1,60 @@
+// Данные каталога. Этот файл менять не надо: поломки не в нём.
+// Поля — как в снапшоте RAWG: id, name, released, background_image,
+// rating (0–5), genres, platforms.
+
+const GAMES = [
+  {
+    id: 3498,
+    name: "Grand Theft Auto V",
+    released: "2013-09-17",
+    background_image: "cover.svg",
+    rating: 4.5,
+    genres: ["Action"],
+    platforms: ["PC", "PlayStation 5", "Xbox Series S/X"],
+  },
+  {
+    id: 3328,
+    name: "The Witcher 3: Wild Hunt",
+    released: "2015-05-18",
+    background_image: "cover.svg",
+    rating: 4.7,
+    genres: ["Action", "RPG"],
+    platforms: ["PC", "Nintendo Switch"],
+  },
+  {
+    id: 326243,
+    name: "Baldur's Gate 3",
+    released: "2023-08-03",
+    background_image: "cover.svg",
+    rating: 4.0,
+    genres: ["RPG"],
+    platforms: ["PC", "PlayStation 5"],
+  },
+  {
+    id: 4200,
+    name: "Portal 2",
+    released: "2011-04-18",
+    background_image: "cover.svg",
+    rating: 4.6,
+    genres: ["Shooter", "Puzzle"],
+    platforms: ["PC", "Xbox 360"],
+  },
+  {
+    id: 41494,
+    name: "Cyberpunk 2077",
+    released: "2020-12-10",
+    background_image: "cover.svg",
+    rating: 4.1,
+    genres: ["Action", "RPG"],
+    platforms: ["PC", "PlayStation 5"],
+  },
+  {
+    id: 58175,
+    name: "God of War",
+    released: "2018-04-20",
+    background_image: "cover.svg",
+    rating: 4.6,
+    genres: ["Action"],
+    platforms: ["PC", "PlayStation 4"],
+  },
+];

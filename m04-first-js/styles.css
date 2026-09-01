@@ -1,0 +1,73 @@
+/* Оформление страницы. Этот файл менять не надо: поломки не в нём. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  font-family: system-ui, sans-serif;
+  color: #22223b;
+  background: #f2e9e4;
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: 28px;
+}
+
+.catalog {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  max-width: 1100px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card {
+  position: relative;
+  padding: 12px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.card__cover {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.card__title {
+  margin: 12px 0 4px;
+  font-size: 18px;
+}
+
+.card__meta {
+  margin: 0;
+  color: #4a4e69;
+  font-size: 14px;
+}
+
+.card__rating {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 2px 8px;
+  font-size: 14px;
+  font-weight: 700;
+  color: #22223b;
+  background: #ffb703;
+  border-radius: 4px;
+}
+
+.catalog-empty,
+noscript {
+  display: block;
+  color: #4a4e69;
+}
