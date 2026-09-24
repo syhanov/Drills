@@ -41,8 +41,9 @@ function renderDetails(game) {
 const list = document.querySelector(".list");
 const input = document.querySelector(".filter__input");
 
+
 function onInput(event) {
-  const query = event.target.value.trim().toLowerCase();
+  const query = input.value.toLowerCase().trim()
   const found = GAMES.filter((game) => game.name.toLowerCase().includes(query));
   list.innerHTML = renderList(found);
 }
@@ -50,8 +51,13 @@ function onInput(event) {
 list.innerHTML = renderList(GAMES);
 
 // Детали по кнопке «Подробнее».
+ // Третья ошибка. Проверка через classList.contains() не учитывала,
+ // что клик мог произойти по дочернему элементу кнопки.
+ // event.target был .item__more-text, поэтому проверка возвращала false
+ // и обработчик сразу завершался. Использовал closest(".item__more"),
+ // чтобы найти кнопку при клике как по ней, так и по её дочерним элементам.
 list.addEventListener("click", (event) => {
-  if (!event.target.classList.contains("item__more")) {
+  if (!event.target.closest(".item__more")) {
     return;
   }
   const item = event.target.closest(".item");
@@ -59,17 +65,26 @@ list.addEventListener("click", (event) => {
   item.querySelector(".item__details").innerHTML = renderDetails(game);
 });
 
-// Подсветка пункта под курсором.
+// Вторая ошибка. Когда курсор попадал не на .item,
+// closest() возвращал null, а код пытался добавить null.classList,
+// из-за чего возникала ошибка.
+// // Подсветка пункта под курсором.
 list.addEventListener("mouseover", (event) => {
   const item = event.target.closest(".item");
   for (const other of list.querySelectorAll(".item")) {
     other.classList.remove("item--hover");
   }
-  item.classList.add("item--hover");
+  if(item !== null && item !== undefined){
+    item.classList.add("item--hover");
+  }
 });
 
+// Четвёртая ошибка. При проверке через Event Listener Breakpoint
+// заметил, что обработчик события был установлен на list,
+// поэтому при вводе текста в input он не срабатывал.
+// Обработчик нужно было навесить непосредственно на input.
 // Escape очищает поиск.
-list.addEventListener("keydown", (event) => {
+input.addEventListener("keydown", (event) => {
   if (event.key !== "Escape") {
     return;
   }
@@ -77,5 +92,7 @@ list.addEventListener("keydown", (event) => {
   list.innerHTML = renderList(GAMES);
 });
 
+// Первая ошибка. onInput() сразу вызывает функцию,
+// а нам нужно передать onInput как обработчик события input.
 // Живой поиск.
-input.addEventListener("input", onInput());
+input.addEventListener("input", onInput);
