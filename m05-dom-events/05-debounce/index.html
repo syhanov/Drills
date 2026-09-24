@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js" defer></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h1>Debounce vs Throttle</h1>
+
+    <input
+        id="input"
+        type="text"
+        placeholder="Начни печатать..."
+    >
+
+    <div class="counters">
+        <div class="counter">
+            <span>Debounce</span>
+            <span id="debounce-count">0</span>
+        </div>
+
+        <div class="counter">
+            <span>Throttle</span>
+            <span id="throttle-count">0</span>
+        </div>
+    </div>
+</div>
+</body>
+</html>
