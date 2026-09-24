@@ -1,0 +1,53 @@
+/* Оформление стенда. Этот файл менять не надо. */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 24px 16px;
+  font-family: system-ui, sans-serif;
+  color: #22223b;
+  background: #f2e9e4;
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+}
+
+.hint {
+  max-width: 640px;
+  margin: 0 0 16px;
+  color: #4a4e69;
+}
+
+#stage {
+  max-width: 640px;
+}
+
+#outer,
+#middle,
+#inner {
+  padding: 24px;
+  border: 2px solid #9a8c98;
+  border-radius: 8px;
+  background: #fff;
+}
+
+#middle {
+  margin-top: 12px;
+  background: #f7f1ed;
+}
+
+#inner {
+  margin-top: 12px;
+  background: #e8ddd6;
+}
+
+#link {
+  display: inline-block;
+  margin-top: 12px;
+  color: #22223b;
+}
