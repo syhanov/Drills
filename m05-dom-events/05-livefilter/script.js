@@ -45,4 +45,23 @@ search.addEventListener('input', function(){
     }
 })
 
+const addButton = document.querySelector('#add')
+const removeButton = document.querySelector('#remove')
+let index = 0
 
+addButton.addEventListener('click', function(){
+    let game = games[index]
+    const card = document.createElement('li')
+    card.classList.add('game')
+    const title = document.createElement('p')
+    title.classList.add('game--title')
+    title.textContent = game.name
+    card.append(title)
+    list.append(card)
+    index += 1
+})
+
+removeButton.addEventListener('click', function(){
+    list.lastElementChild.remove()
+    index -= 1
+})
