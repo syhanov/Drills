@@ -2,13 +2,19 @@ const games = [];
 
 for(let i = 1; i <= 200; i++){
     let game = {
-        name : 'Игра' + ' ' + i
+        name: 'Игра ' + i
     }
+
     games.push(game)
 }
 
 
 const list = document.querySelector('.list')
+const count = document.querySelector('#count')
+const search = document.querySelector('#filter')
+const addButton = document.querySelector('#add')
+const removeButton = document.querySelector('#remove')
+
 
 function renderGame(game){
     return `<li class='game'>
@@ -16,52 +22,44 @@ function renderGame(game){
     </li>`
 }
 
-const html = games
-    .map(function(game){
-        return renderGame(game)
-})  .join('');
-
-list.innerHTML = html
-
-
-const search = document.querySelector('#filter')
-
-search.addEventListener('input', function(){
+function renderGames(){
     const found = games.filter(function(game) {
-        return game.name.toLowerCase().includes(search.value.toLowerCase())
+        return game.name
+            .toLowerCase()
+            .includes(search.value.toLowerCase())
     })
-    let renderedfound = 
-    found
+    const html = found
         .map(function(game){
             return renderGame(game)
-        }) .join('')
-    list.innerHTML = renderedfound
-    const count = document.querySelector('#count')
+        })
+        .join('')
+
+    list.innerHTML = html
+
     if(found.length !== 0){
-        count.textContent = found.length    
+        count.textContent = found.length
     }
     else{
         count.textContent = `По запросу: ${search.value} ничего не найдено`
     }
+}
+renderGames()
+search.addEventListener('input', function(){
+    renderGames()
 })
-
-const addButton = document.querySelector('#add')
-const removeButton = document.querySelector('#remove')
-let index = 0
-
 addButton.addEventListener('click', function(){
-    let game = games[index]
-    const card = document.createElement('li')
-    card.classList.add('game')
-    const title = document.createElement('p')
-    title.classList.add('game--title')
-    title.textContent = game.name
-    card.append(title)
-    list.append(card)
-    index += 1
+    let game = {
+        name: 'Игра ' + (games.length + 1)
+    }
+    games.push(game)
+    renderGames()
 })
+
 
 removeButton.addEventListener('click', function(){
-    list.lastElementChild.remove()
-    index -= 1
+    if(games.length === 0){
+        return
+    }
+    games.pop()
+    renderGames()
 })
