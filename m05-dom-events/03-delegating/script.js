@@ -19,6 +19,11 @@ button.addEventListener('click', function(){
 
 list.addEventListener('click', function(event){
     const game = event.target.closest('li')
-    game.classList.add('selected')
-    if(!game) return;
+        if(!game){
+            return; 
+        }
+        else{
+            game.classList.add('selected')
+        }
+
 })
