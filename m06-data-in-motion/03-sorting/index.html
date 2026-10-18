@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M06 — Сортировка с пропусками</title>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+  <style>
+    body { max-width: 54rem; margin: 2rem auto; padding: 0 1rem; font-family: sans-serif; line-height: 1.5; }
+    pre { padding: 1rem; background: #f2f2f2; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Сортировка с пропусками</h1>
+  <p>Открой <code>app.js</code> и консоль. Данные уже отображаются; сортировку ты пишешь сам в свободной области файла.</p>
+  <ol>
+    <li>Напиши <code>sortRecords(records, mode)</code>. Каждый вызов возвращает новый массив, не меняя входные данные. Допустимые режимы: <code>"score"</code>, <code>"name"</code>, <code>"date"</code>, <code>"original"</code>.</li>
+    <li>В режиме <code>score</code> сортируй числа по убыванию; в <code>name</code> — названия по возрастанию. Для строк используй <code>localeCompare</code> с локалью <code>"en"</code>; в данных названия на английском.</li>
+    <li>В режиме <code>date</code> сортируй строки ISO <code>YYYY-MM-DD</code> от новых к старым. Записи с <code>date: null</code> должны идти последними.</li>
+    <li>При равенстве основного значения в любом из трёх режимов сортируй по числовому <code>id</code> по возрастанию. Это относится и к двум отсутствующим датам. Напиши функцию сортировки, которая возвращает отрицательное число, ноль или положительное число.</li>
+    <li>Для восстановления порядка вызови режим <code>original</code> с сохранённым исходным массивом <code>RECORDS</code>, а не с отсортированным результатом: верни его копию. Это не сортировка по <code>id</code>.</li>
+    <li>Выведи полученные массивы <code>id</code> через <code>report("Подпись", значение)</code>. Переключи все режимы по очереди, затем восстанови исходный порядок. Проверь, что исходный массив и его объекты не изменились.</li>
+  </ol>
+  <h2>Ожидаемые id по порядку</h2>
+  <ul>
+    <li><code>score: [1, 2, 4, 5, 3, 6]</code>.</li>
+    <li><code>name: [6, 1, 2, 4, 3, 5]</code>.</li>
+    <li><code>date: [1, 4, 6, 3, 2, 5]</code>.</li>
+    <li><code>original: [4, 2, 6, 1, 5, 3]</code>.</li>
+    <li>Для пустого входа каждый режим возвращает новый <code>[]</code>. Оценка <code>0</code> — число, не пропуск. Все остальные даты корректны; разбирать их через <code>Date</code> не требуется.</li>
+  </ul>
+  <h2>Исходные данные</h2>
+  <pre id="input"></pre>
+  <h2>Твой вывод</h2>
+  <pre id="output">Решение ещё не написано. Здесь появятся значения, которые ты передашь в report.</pre>
+  <noscript>Включи JavaScript, чтобы увидеть исходные данные и вывод.</noscript>
+</body>
+</html>

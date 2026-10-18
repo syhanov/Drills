@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M06 — Метки из записей</title>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+  <style>
+    body { max-width: 54rem; margin: 2rem auto; padding: 0 1rem; font-family: sans-serif; line-height: 1.5; }
+    pre { padding: 1rem; background: #f2f2f2; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Метки из записей</h1>
+  <p>Открой <code>app.js</code> и консоль. Отображение данных уже работает; обработку ты пишешь сам в свободной области файла.</p>
+  <ol>
+    <li>Напиши <code>collectLabels(records)</code>. Через <code>flatMap</code> собери все метки в один массив <code>flattened</code>, сохранив порядок и повторы.</li>
+    <li>Получи массив <code>unique</code>: убери повторы через <code>Set</code> и отсортируй метки по возрастанию.</li>
+    <li>Через <code>reduce</code> посчитай <code>frequencies</code> — объект, где ключ — метка, значение — число появлений. Верни <code>{ flattened, unique, frequencies }</code>.</li>
+    <li>Передай реальные результаты в <code>report("Подпись", значение)</code>. Проверь пустой вход и сравни исходные записи и их <code>tags</code> до и после: они не должны меняться.</li>
+  </ol>
+  <h2>Что должно получиться</h2>
+  <ul>
+    <li><code>flattened: ["red", "blue", "red"]</code>.</li>
+    <li><code>unique: ["blue", "red"]</code>.</li>
+    <li><code>frequencies: { blue: 1, red: 2 }</code>. Порядок ключей объекта не важен.</li>
+    <li>Для <code>[]</code>: <code>{ flattened: [], unique: [], frequencies: {} }</code>. Запись с <code>tags: []</code> не добавляет ни метки, ни счётчика.</li>
+    <li>У каждой записи есть массив <code>tags</code>. Метки — строки; регистр значим, приведение к нижнему регистру не требуется.</li>
+  </ul>
+  <h2>Исходные данные</h2>
+  <pre id="input"></pre>
+  <h2>Твой вывод</h2>
+  <pre id="output">Решение ещё не написано. Здесь появятся значения, которые ты передашь в report.</pre>
+  <noscript>Включи JavaScript, чтобы увидеть исходные данные и вывод.</noscript>
+</body>
+</html>

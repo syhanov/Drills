@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M06 — Копия массива</title>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+  <style>
+    body { max-width: 54rem; margin: 2rem auto; padding: 0 1rem; font-family: sans-serif; line-height: 1.5; }
+    pre { padding: 1rem; background: #f2f2f2; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Копия массива</h1>
+  <p>Открой <code>app.js</code>. Стенд уже показывает данные; девять опытов ты пишешь сам. Сначала запиши предсказания в оставленном комментарии, затем запускай код и допиши объяснения.</p>
+  <ol>
+    <li>Сравни три способа получить <code>copy</code>: ссылка <code>copy = source</code>, копия массива <code>copy = [...source]</code>, массив поверхностных копий объектов <code>copy = source.map(item =&gt; ({ ...item }))</code>.</li>
+    <li>Для каждого способа проведи три отдельных опыта: отсортируй <code>copy</code> по <code>id</code> по возрастанию; присвой <code>copy[0].name = "Changed"</code>; добавь <code>"new"</code> в <code>copy[0].tags</code>.</li>
+    <li>Перед каждым из девяти опытов заново вызови <code>createItems()</code> для <code>source</code>. Не продолжай изменения после прошлого опыта: иначе индекс <code>0</code> может обозначать уже другой объект.</li>
+    <li>До операции сохрани снимок через <code>JSON.stringify(source)</code>. После операции выведи через <code>report("Подпись", значение)</code> снимки, массивы id, имена и метки обоих массивов. Объясни, что общее на уровнях «массив → объект → tags».</li>
+    <li>Напиши <code>sortedById(items)</code>: верни новый массив, отсортированный по <code>id</code>, не меняя исходный массив и объекты. Объясни, почему для одной сортировки не нужна глубокая копия.</li>
+  </ol>
+  <h2>Границы и конкретные значения</h2>
+  <ul>
+    <li>В каждом свежем входе порядок id — <code>[3, 1, 2]</code>, имена — <code>["Cedar", "Aster", "Birch"]</code>, метки — <code>[["green"], ["red", "blue"], []]</code>.</li>
+    <li>После сортировки порядок <code>copy</code> — <code>[1, 2, 3]</code>. После отдельного изменения имени имена <code>copy</code> — <code>["Changed", "Aster", "Birch"]</code>. После отдельного добавления метки <code>copy[0].tags</code> — <code>["green", "new"]</code>.</li>
+    <li>Меняется ли при каждом опыте <code>source</code> — твоя часть предсказания и объяснения, не готовый ответ стенда.</li>
+    <li><code>sortedById(createItems())</code> даёт id <code>[1, 2, 3]</code>, исходные id остаются <code>[3, 1, 2]</code>. Для <code>[]</code> функция возвращает новый пустой массив.</li>
+  </ul>
+  <h2>Свежие исходные данные</h2>
+  <pre id="input"></pre>
+  <h2>Твой вывод</h2>
+  <pre id="output">Опыты ещё не написаны. Здесь появятся значения, которые ты передашь в report.</pre>
+  <noscript>Включи JavaScript, чтобы увидеть исходные данные и вывод.</noscript>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>M06 — Заказы</title>
+  <script src="data.js" defer></script>
+  <script src="app.js" defer></script>
+  <style>
+    body { max-width: 54rem; margin: 2rem auto; padding: 0 1rem; font-family: sans-serif; line-height: 1.5; }
+    pre { padding: 1rem; background: #f2f2f2; overflow: auto; }
+  </style>
+</head>
+<body>
+  <h1>Заказы</h1>
+  <p>Открой <code>app.js</code> и консоль браузера. Данные и вывод на странице уже работают; расчёт ты пишешь сам в свободной области файла.</p>
+  <ol>
+    <li>Напиши <code>summarizeOrders(orders)</code>. Через <code>filter</code> оставь оплаченные заказы, через <code>map</code> получи суммы <code>price * quantity</code>, через <code>reduce</code> сложи их. Верни объект <code>{ paidIds, lineTotals, total }</code>; оба массива идут в порядке исходных оплаченных заказов.</li>
+    <li>Напиши <code>totalPaidWithLoop(orders)</code>: тот же итог обычным циклом, без методов обработки массивов. Сравни оба результата.</li>
+    <li>Выведи реальные результаты через <code>report("Подпись", значение)</code>. Проверь исходный массив до и после вызовов: его порядок и все поля должны сохраниться.</li>
+  </ol>
+  <h2>Что должно получиться</h2>
+  <ul>
+    <li><code>paidIds: [1, 2, 4, 6]</code>, <code>lineTotals: [240, 225, 0, 60]</code>, <code>total: 525</code>. Цикл тоже возвращает <code>525</code>.</li>
+    <li>Для <code>[]</code> и массива только неоплаченных заказов: <code>{ paidIds: [], lineTotals: [], total: 0 }</code>; цикл возвращает <code>0</code>.</li>
+    <li>Оплаченный заказ с нулевой ценой остаётся в выборке; неоплаченный заказ за <code>10000</code> не входит в итог. Данные корректные: числа неотрицательные, количество целое, <code>paid</code> — boolean.</li>
+  </ul>
+  <h2>Исходные данные</h2>
+  <pre id="input"></pre>
+  <h2>Твой вывод</h2>
+  <pre id="output">Решение ещё не написано. Здесь появятся значения, которые ты передашь в report.</pre>
+  <noscript>Включи JavaScript, чтобы увидеть исходные данные и вывод.</noscript>
+</body>
+</html>
