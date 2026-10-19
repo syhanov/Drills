@@ -17,3 +17,48 @@ console.log("Данные заказов загружены. Расчёт ещё
 // Сохрани JSON.stringify(ORDERS) до вызовов и сравни после.
 // Печатай вычисленные значения через report, не готовые числа из условия.
 
+function summarizeOrders(orders) {
+  let paidedArray = orders.filter(function(order) {
+    return order.paid === true
+  })
+  let paidIds = paidedArray.map(function(order) {
+    return order.id
+  })
+  let lineTotals = paidedArray.map(function(order) {
+    return order.price * order.quantity
+  })
+  let total = lineTotals.reduce((accum, curent) => accum + curent,0)
+  return {
+    paidIds: paidIds.join(", "),
+    lineTotals: lineTotals.join(", "),
+    total
+  }
+}
+
+report('Сводка заказов', totalPaidWithLoop(ORDERS))
+
+function totalPaidWithLoop(orders) {
+  let paidedArray = []
+  for(let i = 0; i<orders.length; i++){
+    if(orders[i].paid === true){
+      paidedArray.push(orders[i])
+    }
+  }
+  let paidIds = []
+  for(let i = 0; i<paidedArray.length; i++){
+    paidIds.push(paidedArray[i].id)
+  }
+  let lineTotals = []
+  let total = 0
+  for(let i = 0; i<paidedArray.length; i++){
+    lineTotals.push(paidedArray[i].price * paidedArray[i].quantity)
+  }
+  for(let i = 0; i<lineTotals.length; i++){
+    total += lineTotals[i]
+  }
+  return {
+    paidIds: paidIds.join(", "),
+    lineTotals: lineTotals.join(", "),
+    total
+  }
+}
