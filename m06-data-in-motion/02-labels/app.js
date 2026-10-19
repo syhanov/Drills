@@ -16,3 +16,24 @@ console.log("Записи загружены. Обработка меток ещ
 // и []. Сохрани JSON.stringify(RECORDS) до вызовов и сравни после.
 // Печатай вычисленные значения через report, не массивы из условия.
 
+function collectLabels(records) {
+  let flattened = records.flatMap(function(record) {
+    return record.tags
+  })
+  let unique = [... new Set(flattened)]
+  let frequencies = flattened.reduce(function(accum, label) {
+    if(!accum[label]){
+      accum[label] = 1
+    }
+    else if(accum[label])
+      accum[label] += 1
+      return accum
+  },{})
+    return {
+      flattened: flattened,
+      unique: unique,  
+      frequencies : frequencies,
+  }
+}
+
+report('Сводка', collectLabels(RECORDS))
