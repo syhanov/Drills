@@ -17,3 +17,30 @@ console.log("Записи загружены. Сортировка ещё не �
 // Сохрани JSON.stringify(RECORDS) до вызовов и сравни после.
 // Проверь [] во всех режимах. Через report выведи реальные id результатов.
 
+function sortRecords(records, mode) {
+  if(mode === "score"){
+    let scoreFiltered = [...records].sort(function(a,b) {
+      return b.score - a.score || a.id - b.id
+    })
+  return scoreFiltered
+  }
+  if(mode === "name"){
+    let nameFiltered = [...records].sort(function(a,b) {
+      return a.name.localeCompare(b.name, 'en') || a.id - b.id
+    })
+  return nameFiltered
+  }
+  if(mode === "date"){
+    let dateFiltered = [...records].sort(function(a,b) {
+        if (a.date === null) return 1;
+        if (b.date === null) return -1;
+      return b.date.localeCompare(a.date) || a.id - b.id
+    })
+  return dateFiltered
+  }
+  if(mode === 'original'){
+    return [...RECORDS]
+  }
+}
+
+report('Отсортированные данные', sortRecords(RECORDS, "original"))
